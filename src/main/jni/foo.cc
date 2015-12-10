@@ -24,4 +24,12 @@ void Foo::getValues(struct Values& values) {
 	values.y = _a * 10;
 }
 
+void Foo::setVector(std::vector<int>& vect) {
+	_a = vect[0];
+	for (int i = 1 ; i < vect.size() ; i ++)
+		_a += vect[i];
+	_a /= vect.size();
+}
+
+	
 } // namespace FooLib
